@@ -1,0 +1,206 @@
+:root {
+    --bg-href: url(bg.gif);
+    --bg-offset-y: 0%;
+    --bg-color: #111;
+    --fg-color: #eee;
+    --fg-color-dim: #ccc;
+    --hl-color-1: rgb(246, 148, 255);
+    --hl-color-2: rgb(106, 191, 248);
+}
+
+:root[data-theme="3baka"] {
+    --bg-href: url(bg2.gif);
+    --bg-offset-y: 40%;
+    --bg-color: #abeee5aa;
+    --fg-color: #35343a;
+    --fg-color-dim: #444;
+    --hl-color-1: #e6c52b;
+    --hl-color-2: #e9607a;
+}
+
+body {
+    height: 100%;
+    background: var(--bg-href);
+    background-color: var(--bg-color);
+    background-size: cover;
+    background-position-y: var(--bg-offset-y);
+    background-repeat: repeat-y;
+    color: var(--fg-color);
+    font-family: "Space Mono", monospace;
+}
+
+#navthingy {
+    overflow: hidden;
+    background-color: var(--bg-color);
+    top: 0;
+    width: 800px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0;
+    border: 1px outset var(--fg-color);
+}
+
+#navthingy a {
+    float: left;
+    display: block;
+    color: var(--fg-color);
+    text-align: center;
+    padding: 4px 16px;
+    text-decoration: none;
+    transition: all 0.3s;
+    font-size: 16px;
+}
+
+#navthingy a:hover {
+    background-color: var(--hl-color-1);
+    color: var(--bg-color);
+    transition: all 0.3s;
+}
+
+#stuff,
+#headerthingy,
+#footerthingy {
+    margin-top: 36px;
+    display: block;
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px outset var(--fg-color);
+    background-color: var(--bg-color);
+}
+
+#headerthingy * {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+}
+
+#stuff {
+    border: 0;
+    background-color: var(--bg-color);
+}
+
+#stuff section {
+    padding: 12px;
+    margin-bottom: 36px;
+    border: 1px outset var(--fg-color);
+    background-color: var(--bg-color);
+}
+
+#footerthingy {
+    padding: 8px;
+    text-align: center;
+}
+
+.very-important {
+    padding-top: 32px;
+    text-align: center;
+    padding-bottom: 32px;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    text-decoration-thickness: 2px;
+    font-weight: bold;
+    font-size: 20px;
+    text-decoration-color: var(--hl-color-2);
+}
+
+.underline {
+    border-bottom: 1px dotted var(--fg-color);
+    width: 780px;
+    display: block;
+}
+
+h1 {
+    font-size: 42px;
+    margin-bottom: 32px;
+    font-weight: bold;
+}
+
+h2 {
+    font-weight: bolder;
+    font-size: 22px;
+    margin-bottom: 16px;
+}
+
+h3 {
+    font-size: 20px;
+}
+
+p, li {
+    font-size: 16px;
+    margin-top: 12px;
+    color: var(--fg-color-dim);
+}
+
+strong {
+    font-weight: bolder;
+}
+
+#counter {
+    display: block;
+    margin: 16px auto;
+}
+
+ul {
+    margin-top: 12px;
+    margin-bottom: 16px;
+    margin-left: 24px;
+    list-style-type: square;
+    font-size: 20px;
+}
+
+a:link, a:visited {
+    color: var(--fg-color);
+    text-decoration: underline;
+    text-decoration-color: var(--hl-color-2);
+    text-underline-offset: 2px;
+    text-decoration-thickness: 2px;
+    transition: text-decoration-color 0.5s;
+}
+
+a:hover, a:active {
+    color: var(--fg-color);
+    text-decoration: underline;
+    text-decoration-color: var(--hl-color-1);
+    text-underline-offset: 2px;
+    text-decoration-thickness: 2px;
+    transition: text-decoration-color 0.5s;
+}
+
+.skill-category {
+    border: 1px outset var(--fg-color);
+    padding-left: 8px;
+    padding-top: 8px;
+    margin-top: 16px;
+}
+
+#theme-picker {
+    height: 24px;              
+    min-width: 100px;      
+    background: none;
+    border: 0px;
+    color: var(--fg-color);
+    padding: 1px 4px;
+    font-family: inherit;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+#theme-picker option {
+    background-color: var(--bg-color);
+    color: var(--fg-color);
+}
+
+#theme-picker:hover,
+#theme-picker:focus {
+    background-color: var(--bg-color);
+    color: var(--fg-color);
+    border-color: var(--hl-color-1);
+    outline: none;
+}
+
+#theme-picker:focus {
+    outline: 2px dotted var(--hl-color-2);
+    outline-offset: 2px;
+}

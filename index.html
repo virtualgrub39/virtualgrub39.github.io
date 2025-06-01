@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html x-data="themeSwitcher()" x-init="init()" x-bind:data-theme="theme">
+
+<head>
+    <meta charset="utf-8" />
+    <title>BRUH</title>
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="main.css" />
+    <script defer src="main.js"></script>
+
+    <!-- Bloat :3 -->
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header id="headerthingy">
+        <h1>virtualgrub39's page</h1>
+    </header>
+
+    <nav id="navthingy">
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+    <div> theme:
+    <select id="theme-picker" x-model="theme" x-on:change="saveTheme()">
+    <template x-for="t in themes" :key="t">
+        <option :value="t" x-text="t === '' ? 'default' : t"></option>
+    </template>
+    </select> </div>
+    </nav>
+
+    <main id="stuff">
+        <section id="about">
+            <h2 class="underline">About</h2>
+            <p><strong>Name:</strong> virtualgrub39 (<em>Mikołaj Trafisz</em>)</p>
+            <p><strong>Age:</strong> 21</p>
+            <p><strong>Role:</strong> Electronics Student • ICT Technician • Low-Level recreational Programmer</p>
+            <p><strong>Location:</strong> Poland, Warsaw</p>
+        </section>
+
+        <section id="skills">
+            <h2 class="underline">Skills</h2>
+            
+            <div class="skill-category">
+                <h3>Programming &amp; Software</h3>
+                <ul>
+                    <li>C, make, CMake, gcc, clang</li>
+                    <li>Rust</li>
+                    <li>Python</li>
+                    <li>Git, Github, Gitlab</li>
+                </ul>
+            </div>
+
+            <div class="skill-category">
+                <h3>Electronics &amp; Embedded</h3>
+                <ul>
+                    <li>AVR &amp; PIC MCUs</li>
+                    <li>KiCad, Altium Designer</li>
+                    <li>Soldering &amp; prototyping</li>
+                    <li>Electrical &amp; logical circuit analysis and design</li>
+                </ul>
+            </div>
+
+            <div class="skill-category">
+                <h3>Networking &amp; IT</h3>
+                <ul>
+                    <li>Cisco &amp; MikroTik (Routers, Switches, Firmware)</li>
+                    <li>RIP, OSPF, VLANs, PPPoE, PPTP/SSTP, NAT, Firewall implementation</li>
+                    <li>Windows Server 2016/2019 &amp; systemd linuxes</li>
+                    <li>Fiber optics - welding, deploying infrastructure, setting up the equipment</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="projects">
+            <h2 class="underline">Active Projects</h2>
+            <p><strong>busy at uni ;(</strong></p>
+        </section>
+
+        <section id="contact">
+            <h2 class="underline">Contact / Socials</h2>
+            
+            <p><strong>EMAIL:</strong> <span id="email-container"></span></p>
+            <p><strong>GITHUB:</strong> <a href="https://github.com/virtualgrub39" target="_blank" rel="noopener">github.com/virtualgrub39</a></p>
+            <p><strong>LINKEDIN:</strong> <a href="https://www.linkedin.com/in/mtrafisz39/" target="_blank" rel="noopener">linkedin.com/in/mtrafisz39</a></p>
+        </section>
+    </main>
+
+    <section id="lolis" style="border: 0; background-color: transparent;">
+        <img id="counter" src="https://count.getloli.com/@shoujoqindex?theme=rule34"/>
+    </section>
+
+    <footer id="footerthingy">
+        <small>&copy 2025 <a href="https://github.com/virtualgrub39">virtualgrub39</a></small>
+    </footer>
+
+</body>
+
+</html>
