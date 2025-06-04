@@ -59,8 +59,7 @@ body {
 }
 
 #stuff,
-#headerthingy,
-#footerthingy {
+#headerthingy {
     margin-top: 36px;
     display: block;
     width: 800px;
@@ -78,7 +77,15 @@ body {
 
 #stuff {
     border: 0;
-    background-color: var(--bg-color);
+    background-color: transparent;
+}
+
+#footerthingy {
+    display: block;
+    background-color: transparent;
+    color: var(--hl-color-2);
+    padding: 8px;
+    text-align: center;
 }
 
 #stuff section {
@@ -86,11 +93,6 @@ body {
     margin-bottom: 36px;
     border: 1px outset var(--fg-color);
     background-color: var(--bg-color);
-}
-
-#footerthingy {
-    padding: 8px;
-    text-align: center;
 }
 
 .very-important {
