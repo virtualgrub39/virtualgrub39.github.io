@@ -6,25 +6,48 @@
     --fg-color-dim: #ccc;
     --hl-color-1: rgb(246, 148, 255);
     --hl-color-2: rgb(106, 191, 248);
+    --bg-repeat: no-repeat;
+    --bg-size: cover;
+    --border-color: #92909b;
+    --border-style: 2px outset;
 }
 
 :root[data-theme="3baka"] {
     --bg-href: url(bg2.gif);
-    --bg-offset-y: 40%;
+    --bg-offset-y: 100%;
     --bg-color: #abeee5aa;
     --fg-color: #35343a;
     --fg-color-dim: #444;
     --hl-color-1: #e6c52b;
     --hl-color-2: #e9607a;
+    --bg-repeat: no-repeat;
+    --bg-size: cover;
+    --border-color: #04030c;
+    --border-style: 1px outset;
+}
+
+:root[data-theme="moe"] {
+    --bg-href: url(bg3.gif);
+    --bg-offset-y: 0%;
+    --bg-color: #ffffffff;
+    --fg-color: #35343a;
+    --fg-color-dim: #444;
+    --hl-color-1: #e6c52b;
+    --hl-color-2: #3399ff;
+    --bg-repeat: repeat-x;
+    --bg-size: auto 100%;
+    --border-color: #3399ff;
+    --border-style: 4px outset;
 }
 
 body {
     height: 100%;
-    background: var(--bg-href);
+    background-image: var(--bg-href);
     background-color: var(--bg-color);
-    background-size: cover;
-    background-position-y: var(--bg-offset-y);
-    background-repeat: repeat-y;
+    background-attachment: fixed;
+    background-size: var(--bg-size);
+    background-position: center var(--bg-offset-y);
+    background-repeat: var(--bg-repeat);
     color: var(--fg-color);
     font-family: "Space Mono", monospace;
 }
@@ -38,7 +61,8 @@ body {
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 0;
-    border: 1px outset var(--fg-color);
+    border: var(--border-style) var(--border-color);
+    border-top: none;
 }
 
 #navthingy a {
@@ -65,7 +89,7 @@ body {
     width: 800px;
     margin-left: auto;
     margin-right: auto;
-    border: 1px outset var(--fg-color);
+    border: var(--border-style) var(--border-color);
     background-color: var(--bg-color);
 }
 
@@ -91,7 +115,7 @@ body {
 #stuff section {
     padding: 12px;
     margin-bottom: 36px;
-    border: 1px outset var(--fg-color);
+    border: var(--border-style) var(--border-color);
     background-color: var(--bg-color);
 }
 
@@ -108,7 +132,7 @@ body {
 }
 
 .underline {
-    border-bottom: 1px dotted var(--fg-color);
+    border-bottom: 1px dotted var(--border-color);
     width: 780px;
     display: block;
 }
@@ -129,7 +153,8 @@ h3 {
     font-size: 20px;
 }
 
-p, li {
+p,
+li {
     font-size: 16px;
     margin-top: 12px;
     color: var(--fg-color-dim);
@@ -152,7 +177,8 @@ ul {
     font-size: 20px;
 }
 
-a:link, a:visited {
+a:link,
+a:visited {
     color: var(--fg-color);
     text-decoration: underline;
     text-decoration-color: var(--hl-color-2);
@@ -161,7 +187,8 @@ a:link, a:visited {
     transition: text-decoration-color 0.5s;
 }
 
-a:hover, a:active {
+a:hover,
+a:active {
     color: var(--fg-color);
     text-decoration: underline;
     text-decoration-color: var(--hl-color-1);
@@ -171,15 +198,15 @@ a:hover, a:active {
 }
 
 .skill-category {
-    border: 1px outset var(--fg-color);
+    border: var(--border-style) var(--border-color);
     padding-left: 8px;
     padding-top: 8px;
     margin-top: 16px;
 }
 
 #theme-picker {
-    height: 24px;              
-    min-width: 100px;      
+    height: 24px;
+    min-width: 100px;
     background: none;
     border: 0px;
     color: var(--fg-color);
@@ -205,4 +232,9 @@ a:hover, a:active {
 #theme-picker:focus {
     outline: 2px dotted var(--hl-color-2);
     outline-offset: 2px;
+}
+
+.js-required
+{
+    visibility: collapse;
 }

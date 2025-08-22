@@ -5,6 +5,7 @@ function themeSwitcher() {
     themes: [
       '',     
       '3baka', 
+      'moe',
     ],
 
     theme: '',
@@ -50,4 +51,8 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     // ^ not much better, but still...
+});
+
+document.querySelectorAll('.js-required').forEach(el => {
+  el.style.visibility = 'visible';
 });

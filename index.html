@@ -25,7 +25,7 @@
     <a href="#skills">Skills</a>
     <a href="#projects">Projects</a>
     <a href="#contact">Contact</a>
-    <div> theme:
+    <div class="js-required"> <b>theme:</b>
     <select id="theme-picker" x-model="theme" x-on:change="saveTheme()">
     <template x-for="t in themes" :key="t">
         <option :value="t" x-text="t === '' ? 'default' : t"></option>
